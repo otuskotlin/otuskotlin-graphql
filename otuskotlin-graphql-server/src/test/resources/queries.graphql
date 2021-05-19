@@ -1,0 +1,10 @@
+query GetNote($id: UUID!, $versions: Int!) {
+    note(id: $id) {
+        id
+        name
+        versions(first: $versions, after: 0) {
+            id
+            value
+        }
+    }
+}
